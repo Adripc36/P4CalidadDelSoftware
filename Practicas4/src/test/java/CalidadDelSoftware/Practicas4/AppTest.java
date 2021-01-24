@@ -47,12 +47,6 @@ public class AppTest
         assertTrue( true );
     }
     
-	public void testSuma() {
-	 assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),3);
-	 
-	 System.out.print("la suma da "+n1.sumar(n1.getNum1(), n2.getNum1()));
-		
-	}
     
 	public void testResta() {
 		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),-5);
