@@ -67,14 +67,14 @@ public class AppTest
     
     
     @BeforeClass
-	public static void testantesDeTodo() {
+	public static void antesDeTodo() {
 		
 		System.out.println("CONEXION CON LA BASE DE DATOS");
 
 	}
 	
 	@AfterClass
-	public static void testDespuesDeTodo() throws IOException {
+	public static void DespuesDeTodo() throws IOException {
 		
 		System.out.println("Fin de todo");
 
@@ -82,7 +82,7 @@ public class AppTest
 	}
 	
 	@Before
-	public void testantesQue() throws InterruptedException{
+	public void antesQue() throws InterruptedException{
 		
 		
 		System.out.println("Realizando Test");
@@ -93,7 +93,7 @@ public class AppTest
 	}
 	
 	@After
-	public void testdespuesQue() {
+	public void despuesQue() {
 		System.out.println("Test Finalizado...");
 	}
     
