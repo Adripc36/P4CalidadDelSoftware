@@ -2,6 +2,8 @@ package CalidadDelSoftware.Practicas4;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Ignore;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -51,6 +53,16 @@ public class AppTest
 	public void testResta() {
 		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),-5);
 	}
+	
+	@Ignore
+	public void testMultiplicacion() {
+
+		assertEquals(3,n1.multiplicar(n1.getNum1(),n2.getNum1()),0);		
+		
+		
+	}
+	
+	
     
  
 
