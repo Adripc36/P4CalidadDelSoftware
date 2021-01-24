@@ -1,6 +1,13 @@
 package CalidadDelSoftware.Practicas4;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Ignore;
 
@@ -19,6 +26,9 @@ public class AppTest
 	
     NumerosSimples n1 = new NumerosSimples(1);
 	NumerosSimples n2 = new NumerosSimples(2);
+	double [] nums = {1,0};
+	double [] nums2 = {1,2};
+	
 	
     /**
      * Create the test case
@@ -59,6 +69,78 @@ public class AppTest
 
 		assertEquals(3,n1.multiplicar(n1.getNum1(),n2.getNum1()),0);		
 		
+		
+	}
+	
+
+	public void testDivision() {
+
+		assertEquals(0.5,n1.dividir(n1.getNum1(),n2.getNum1()),0);		
+		
+		
+	}
+	
+
+	public void testModulo() {
+
+		assertEquals(5,n1.modulo(n1.getNum1(),n2.getNum1()),0);		
+		
+		
+	}
+
+	public void testRaices() {
+
+		assertEquals(1,n1.raices(n1.getNum1(),n2.getNum1()),0);		
+		
+		
+	}
+	
+	
+
+	public void testIguales(){
+	//	System.out.println("\nNums antes de modificarse: "+nums[0]+"  "+nums[1]);
+		n1.getOtroArray(nums);
+		assertSame(nums, nums);
+		//System.out.println("Nums despues de modificarse: "+nums[0]+"  "+nums[1]);
+	}
+	
+
+	public void testNoiguales(){
+		assertNotSame(n1,n2);
+	}
+	
+
+	public void testNulo() {
+		assertNull(nums[0]);
+	}
+
+	public void testNonulo()
+	{
+		assertNotNull(nums[0]);
+	}
+	
+	public void testVerdad()
+	{
+	//	System.out.println("\nnumero1= " + n1.getNum1() + " numero2= "+ n2.getNum2()+"\n");
+		assertTrue(n1.mayorQue(n1.getNum1(), n2.getNum1()));
+	}
+	
+	public void testFalso()
+	{
+		
+	//	System.out.println("\nnumero1= " + n1.getNum1() + " numero2= "+ n2.getNum2()+"\n");
+		assertFalse(n1.mayorQue(n1.getNum1(), n2.getNum1()));
+	}
+	
+	
+	public void testMatricesIguales(){
+		
+		
+	//	System.out.println("Array1: "+nums[0]+"  "+nums[1]);
+	//	System.out.println("Array2: "+nums2[0]+"  "+nums2[1]);
+		assertArrayEquals(nums,n1.getOtroArray2(nums2),0);
+	//	System.out.println("\nArray1 despues de modificarse: "+nums[0]+"  "+nums[1]);
+	//	System.out.println("Array2 despues de modificarse: "+nums[0]+"  "+nums[1]);
 		
 	}
 	
