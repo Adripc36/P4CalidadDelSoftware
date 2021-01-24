@@ -48,7 +48,7 @@ public class AppTest
     public void testApp()
     {
 		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),2);
-        assertTrue( true );
+        //assertTrue( true );
     }
     
  
