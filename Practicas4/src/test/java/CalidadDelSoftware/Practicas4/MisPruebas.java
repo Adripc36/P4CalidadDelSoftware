@@ -120,7 +120,6 @@ public class MisPruebas {
 
 		assertEquals(1,n1.raices(n1.getNum1(),n2.getNum1()),0);		
 		
-		
 	}
 	
 	
