@@ -1,5 +1,13 @@
 package CalidadDelSoftware.Practicas4;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,64 +17,30 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
+
 import java.io.IOException;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.time.Duration;
 
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
+
+public class MisPruebas {
+ 
 	
-	
-    NumerosSimples n1 = new NumerosSimples(1);
+	NumerosSimples n1 = new NumerosSimples(1);
 	NumerosSimples n2 = new NumerosSimples(2);
 	double [] nums = {1,0};
 	double [] nums2 = {1,2};
+ 
+ 
 	
-	
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+ 
+ //@Ignore ("aún no está listo, por favor ignore.")
+ @Test
+ public void PruebaIgnorame() {
+ assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),0);
+ }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-        
-    }
-    
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
-    
-    
-    @BeforeClass
+ @BeforeClass
 	public static void antesDeTodo() {
 		
 		System.out.println("CONEXION CON LA BASE DE DATOS");
@@ -96,37 +70,53 @@ public class AppTest
 	public void despuesQue() {
 		System.out.println("Test Finalizado...");
 	}
-    
-    
-	public void testResta() {
-		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),-5);
-	}
 	
-	@Ignore
-	public void testMultiplicacion() {
+	@Test
+	public void Testbasuma() {
+
+	//	System.out.println("\nValor1 + "+n1.getNum1()+" Valor2 "+n2.getNum1());			
+		assertEquals(3,n1.sumar(n1.getNum1(),n2.getNum1()),0);		
+	//	System.out.print("la suma da "+n1.sumar(n1.getNum1(), n2.getNum1()));
+		
+	}
+	@Test
+	public void Pruebaresta() {
+		
+		
+		n1.setNum1(4);
+		
+		
+		assertEquals(1,n1.restar(n1.getNum1(),n2.getNum1()),0);		
+		
+		
+	}
+	//@Ignore
+	@Test
+	public void multiplicacion() {
 
 		assertEquals(3,n1.multiplicar(n1.getNum1(),n2.getNum1()),0);		
 		
 		
 	}
 	
-
-	public void testDivision() {
+	@Test
+	public void division() {
 
 		assertEquals(0.5,n1.dividir(n1.getNum1(),n2.getNum1()),0);		
 		
 		
 	}
 	
-
-	public void testModulo() {
+	@Test
+	public void modulo() {
 
 		assertEquals(5,n1.modulo(n1.getNum1(),n2.getNum1()),0);		
 		
 		
 	}
-
-	public void testRaices() {
+	
+	@Test
+	public void raices() {
 
 		assertEquals(1,n1.raices(n1.getNum1(),n2.getNum1()),0);		
 		
@@ -135,34 +125,39 @@ public class AppTest
 	
 	
 
-	public void testIguales(){
+	@Test
+	public void iguales(){
+	//	System.out.println("\nNums antes de modificarse: "+nums[0]+"  "+nums[1]);
 		n1.getOtroArray(nums);
 		assertSame(nums, nums);
 		//System.out.println("Nums despues de modificarse: "+nums[0]+"  "+nums[1]);
 	}
 	
-
-	public void testNoiguales(){
+	@Test
+	public void Noiguales(){
 		assertNotSame(n1,n2);
 	}
 	
-
-	public void testNulo() {
+	@Test
+	public void Nulo() {
 		assertNull(nums[0]);
 	}
-
-	public void testNonulo()
+	
+	@Test
+	public void Nonulo()
 	{
 		assertNotNull(nums[0]);
 	}
 	
-	public void testVerdad()
+	@Test
+	public void Verdad()
 	{
 	//	System.out.println("\nnumero1= " + n1.getNum1() + " numero2= "+ n2.getNum2()+"\n");
 		assertTrue(n1.mayorQue(n1.getNum1(), n2.getNum1()));
 	}
 	
-	public void testFalso()
+	@Test
+	public void Falso()
 	{
 		
 	//	System.out.println("\nnumero1= " + n1.getNum1() + " numero2= "+ n2.getNum2()+"\n");
@@ -170,7 +165,8 @@ public class AppTest
 	}
 	
 	
-	public void testMatricesIguales(){
+	@Test
+	public void MatricesIguales(){
 		
 		
 	//	System.out.println("Array1: "+nums[0]+"  "+nums[1]);
@@ -181,12 +177,5 @@ public class AppTest
 		
 	}
 	
-	
-    
- 
 
-        
-    
-    
-    
 }
