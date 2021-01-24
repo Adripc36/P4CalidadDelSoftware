@@ -23,7 +23,7 @@ import java.time.Duration;
 
 
 
-public class MisPruebas {
+public class AppTest {
  
 	
 	NumerosSimples n1 = new NumerosSimples(1);
