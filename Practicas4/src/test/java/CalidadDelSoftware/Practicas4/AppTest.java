@@ -9,6 +9,12 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 
 import junit.framework.Test;
@@ -58,6 +64,38 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    
+    @BeforeClass
+	public static void testantesDeTodo() {
+		
+		System.out.println("CONEXION CON LA BASE DE DATOS");
+
+	}
+	
+	@AfterClass
+	public static void testDespuesDeTodo() throws IOException {
+		
+		System.out.println("Fin de todo");
+
+		
+	}
+	
+	@Before
+	public void testantesQue() throws InterruptedException{
+		
+		
+		System.out.println("Realizando Test");
+		
+		Thread.sleep(1000);
+		
+
+	}
+	
+	@After
+	public void testdespuesQue() {
+		System.out.println("Test Finalizado...");
+	}
     
     
 	public void testResta() {
