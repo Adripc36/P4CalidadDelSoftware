@@ -12,10 +12,7 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-	
-	
-    NumerosSimples n1 = new NumerosSimples(1);
-	NumerosSimples n2 = new NumerosSimples(2);
+
 	
     /**
      * Create the test case
@@ -42,12 +39,7 @@ public class AppTest
     {
         assertTrue( true );
     }
-    
- 
-	public void testSuma() {
-		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),3);
-	}
-    
+
     
     
     
