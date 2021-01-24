@@ -35,6 +35,7 @@ public class AppTest
     public static Test suite()
     {
         return new TestSuite( AppTest.class );
+        
     }
     
 	public void testSuma() {
@@ -46,7 +47,8 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( false );
+		assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),2);
+        assertTrue( true );
     }
     
  
