@@ -98,7 +98,6 @@ public class AppTest
 	
 
 	public void testIguales(){
-	//	System.out.println("\nNums antes de modificarse: "+nums[0]+"  "+nums[1]);
 		n1.getOtroArray(nums);
 		assertSame(nums, nums);
 		//System.out.println("Nums despues de modificarse: "+nums[0]+"  "+nums[1]);
