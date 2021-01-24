@@ -1,6 +1,5 @@
 package CalidadDelSoftware.Practicas4;
 
-import static org.junit.Assert.assertEquals;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -39,8 +38,7 @@ public class AppTest
     {
         assertTrue( true );
     }
-
-    
+ 
     
     
     
