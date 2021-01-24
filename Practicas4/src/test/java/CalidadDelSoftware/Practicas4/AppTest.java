@@ -34,19 +34,19 @@ public class AppTest {
  
 	
  
- //@Ignore ("aún no está listo, por favor ignore.")
+ @Ignore
  @Test
  public void PruebaIgnorame() {
  assertEquals(2f,n1.sumar(n1.getNum1(),n2.getNum1()),0);
  }
-
+ @Ignore
  @BeforeClass
 	public static void antesDeTodo() {
 		
 		System.out.println("CONEXION CON LA BASE DE DATOS");
 
 	}
-	
+ @Ignore
 	@AfterClass
 	public static void DespuesDeTodo() throws IOException {
 		
@@ -54,7 +54,7 @@ public class AppTest {
 
 		
 	}
-	
+ @Ignore
 	@Before
 	public void antesQue() throws InterruptedException{
 		
@@ -65,12 +65,12 @@ public class AppTest {
 		
 
 	}
-	
+ @Ignore
 	@After
 	public void despuesQue() {
 		System.out.println("Test Finalizado...");
 	}
-	
+ @Ignore
 	@Test
 	public void Testbasuma() {
 
@@ -79,6 +79,7 @@ public class AppTest {
 	//	System.out.print("la suma da "+n1.sumar(n1.getNum1(), n2.getNum1()));
 		
 	}
+ @Ignore
 	@Test
 	public void Pruebaresta() {
 		
@@ -90,7 +91,7 @@ public class AppTest {
 		
 		
 	}
-	//@Ignore
+	@Ignore
 	@Test
 	public void multiplicacion() {
 
@@ -98,7 +99,7 @@ public class AppTest {
 		
 		
 	}
-	
+	@Ignore
 	@Test
 	public void division() {
 
@@ -106,7 +107,7 @@ public class AppTest {
 		
 		
 	}
-	
+	@Ignore
 	@Test
 	public void modulo() {
 
@@ -114,7 +115,7 @@ public class AppTest {
 		
 		
 	}
-	
+	@Ignore
 	@Test
 	public void raices() {
 
@@ -123,7 +124,7 @@ public class AppTest {
 	}
 	
 	
-
+	@Ignore
 	@Test
 	public void iguales(){
 	//	System.out.println("\nNums antes de modificarse: "+nums[0]+"  "+nums[1]);
@@ -131,30 +132,30 @@ public class AppTest {
 		assertSame(nums, nums);
 		//System.out.println("Nums despues de modificarse: "+nums[0]+"  "+nums[1]);
 	}
-	
+	@Ignore
 	@Test
 	public void Noiguales(){
 		assertNotSame(n1,n2);
 	}
-	
+	@Ignore
 	@Test
 	public void Nulo() {
 		assertNull(nums[0]);
 	}
-	
+	@Ignore
 	@Test
 	public void Nonulo()
 	{
 		assertNotNull(nums[0]);
 	}
-	
+	@Ignore
 	@Test
 	public void Verdad()
 	{
 	//	System.out.println("\nnumero1= " + n1.getNum1() + " numero2= "+ n2.getNum2()+"\n");
 		assertTrue(n1.mayorQue(n1.getNum1(), n2.getNum1()));
 	}
-	
+	@Ignore
 	@Test
 	public void Falso()
 	{
@@ -163,7 +164,7 @@ public class AppTest {
 		assertFalse(n1.mayorQue(n1.getNum1(), n2.getNum1()));
 	}
 	
-	
+	@Ignore
 	@Test
 	public void MatricesIguales(){
 		
